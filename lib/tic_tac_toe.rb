@@ -54,7 +54,7 @@ class TicTacToe
   end
   
   def won?
-    WIN_COMBINATIONS.find? do |slots|
+    WIN_COMBINATIONS.find do |slots|
       ['X','O'].any? {|player| slots.all? {|slot| @board[slot]== player}}
     end
   end
