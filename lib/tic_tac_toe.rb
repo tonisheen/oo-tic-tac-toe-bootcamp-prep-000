@@ -53,6 +53,8 @@ class TicTacToe
     turn_count % 2 == 0 ? 'O' : 'X'
   end
   
+
   def won?
-    WIN_COMBINATIONS
+    WIN_COMBINATIONS.any? do |win_combination|
+      win_combination.all? {|slot| }
 end
