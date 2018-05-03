@@ -55,6 +55,34 @@ class TicTacToe
   
 
   def won?
-    WIN_COMBINATIONS.any? do |win_combination|
-      win_combination.all? {|slot| }
+    WIN_COMBINATIONS.any? do |slots|
+      slots.all? {|slot| ['X','O'].any?{|player| @board[slot] == player}}
+    end
+  end
+  
+  def full?
+    turn_count == 9
+  end
+  
+  def draw?
+    full? && !won
+  end
+  
+  def over?
+    draw? || won?
+  end
+  
+  def winner
+    if won?
+      @board[won?[0]]
+    end
+  end
+  
+  def play
+    until over?
+      turn
+    end
+    won? ? puts "Congratulations #{winner}!" : puts "Cat's game!"
+  end
+  
 end
