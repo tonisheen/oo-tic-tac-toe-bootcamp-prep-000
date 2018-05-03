@@ -41,7 +41,7 @@ class TicTacToe
       turn_move = input_to_index(gets.strip)
       valid = valid_move?(turn_move)
     end
-    move(turn_move)
+    move(turn_move, current_player)
     show_board
   end
   
