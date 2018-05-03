@@ -42,7 +42,7 @@ class TicTacToe
       valid = valid_move?(turn_move)
     end
     move(turn_move, current_player)
-    show_board
+    display_board
   end
   
   def turn_count
