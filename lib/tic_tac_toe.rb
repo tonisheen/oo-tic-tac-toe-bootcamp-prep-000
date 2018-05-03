@@ -55,7 +55,7 @@ class TicTacToe
   
   def won?
     WIN_COMBINATIONS.any? do |slots|
-      ['X','O'].any? {|player| slots.all? {|slot| @board[slot]== player}
+      ['X','O'].any? {|player| slots.all? {|slot| @board[slot]== player}}
     end
   end
   
